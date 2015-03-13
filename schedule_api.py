@@ -31,7 +31,8 @@ def get_data(relative_path):
         if r.status_code == 400:
             break
 
-    raise ScheduleApiError('error for url: {0} message: "{1}" code: {2}'.format(relative_path, r.text, r.status_code))
+    raise ScheduleApiError('error for url: {0} message: "{1}" code: {2}' \
+        .format(relative_path, r.text, r.status_code))
 
 def get_terms():
     '''
