@@ -6,8 +6,7 @@ class ScheduleApiError(Exception):
     '''
     Raised if there is an error with the schedule API.
     '''
-    def __init__(self, message=None):
-        self.message = message
+    pass
 
 # The base API endpoint
 base_url = 'http://umich-schedule-api.herokuapp.com'
@@ -29,8 +28,10 @@ def get_data(relative_path):
         r = requests.get(base_url + relative_path)
         if r.status_code == 200:
             return json.loads(r.text)
+        if r.status_code == 400:
+            break
 
-    raise ScheduleApiError("schedule api error for url: {0}".format(relative_path))
+    raise ScheduleApiError('error for url: {0} message: "{1}" code: {2}'.format(relative_path, r.text, r.status_code))
 
 def get_terms():
     '''
