@@ -11,6 +11,3 @@ Please include a brief description here of what your website will do overall, an
 
 ### Group Logistics
 Your group should be meeting regularly. List here when and where your group will be holding meetings. Also, describe how your group will communicate with each other (we like GroupMe). Finally, describe how your group will divide and assign tasks among group members.
-
-### Reach Features Being Considered
-* Bullet reach features that your group is considering. Please note if the reach feature is a custom reach (not listed in the spec).
