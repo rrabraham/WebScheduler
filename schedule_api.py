@@ -9,11 +9,10 @@ class ScheduleApiError(Exception):
     pass
 
 # The base API endpoint
-base_url = 'http://umich-schedule-api.herokuapp.com'
+base_url = 'http://umich-schedule-api.herokuapp.com/v3'
 
 # the amount of time to wait for the schedule API
 timeout_duration = 25
-
 
 def get_data(relative_path):
     '''
@@ -41,3 +40,12 @@ def get_terms():
         ('TermCode', 'TermDescr', 'TermShortDescr')
     '''
     return get_data('/get_terms')
+
+'''
+You should add more functions below to get information from the API.
+
+    -   In addition to the information provided in the spec, use the get_terms function 
+        above as a model for how you might setup the other functions.
+    -   Note some functions will need to have arguments (whereas get_terms does not).
+    -   You may remove this comment when you start.
+'''
